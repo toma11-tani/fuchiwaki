@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="no-js">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="株式会社 渕脇殖産の健康食品ラインアップ。にんにく卵黄・熟成酢・黒糖シロップの特徴や原材料、成分情報をご紹介します。">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:site_name" content="株式会社 渕脇殖産">
   <meta property="og:title" content="商品紹介｜株式会社 渕脇殖産">
   <meta property="og:description" content="ふちわきやの代表商品、にんにく卵黄・熟成酢・黒糖シロップをご案内します。">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://www.fuchiwaki.jp/products.html">
   <meta property="og:image" content="https://www.fuchiwaki.jp/assets/img/prod_garlic_egg.jpg">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#B89B5E">
   <title>商品紹介｜株式会社 渕脇殖産</title>
+  <link rel="canonical" href="https://www.fuchiwaki.jp/products.html">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -21,7 +28,7 @@
         <img src="assets/img/logo.png" alt="株式会社 渕脇殖産 ロゴ">
         <span class="header__brand"><strong>株式会社 渕脇殖産</strong><span>ふちわきや since 1907</span></span>
       </a>
-      <nav class="nav" aria-label="メインメニュー">
+      <nav class="nav" id="global-nav" aria-label="メインメニュー">
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="index.html">HOME</a></li>
           <li class="nav__item"><a class="nav__link" href="products.html" aria-current="page">商品紹介</a></li>
@@ -49,7 +56,7 @@
         </ul>
       </nav>
 
-      <article class="product" id="garlic-egg" aria-labelledby="garlic-egg-title">
+      <article class="product" id="garlic-egg" aria-labelledby="garlic-egg-title" tabindex="-1">
         <img class="product__image" src="assets/img/prod_garlic_egg.jpg" alt="にんにく卵黄の瓶" loading="lazy">
         <div class="product__body">
           <header>
@@ -87,18 +94,18 @@
             <h3 class="pillar__title" id="garlic-egg-nutrition">栄養成分表示（3粒あたり）</h3>
             <table class="product__table">
               <tbody>
-                <tr><th scope="row">エネルギー</th><td>11kcal</td></tr>
-                <tr><th scope="row">たんぱく質</th><td>0.4g</td></tr>
-                <tr><th scope="row">脂質</th><td>0.9g</td></tr>
-                <tr><th scope="row">炭水化物</th><td>0.2g</td></tr>
-                <tr><th scope="row">食塩相当量</th><td>0.003g</td></tr>
+                <tr><th scope="row">エネルギー</th><td>kcal</td></tr>
+                <tr><th scope="row">たんぱく質</th><td>g</td></tr>
+                <tr><th scope="row">脂質</th><td>g</td></tr>
+                <tr><th scope="row">炭水化物</th><td>g</td></tr>
+                <tr><th scope="row">食塩相当量</th><td>g</td></tr>
               </tbody>
             </table>
           </section>
         </div>
       </article>
 
-      <article class="product" id="aged-vinegar" aria-labelledby="aged-vinegar-title">
+      <article class="product" id="aged-vinegar" aria-labelledby="aged-vinegar-title" tabindex="-1">
         <img class="product__image" src="assets/img/prod_vinegar.jpg" alt="熟成酢の瓶" loading="lazy">
         <div class="product__body">
           <header>
@@ -136,18 +143,18 @@
             <h3 class="pillar__title" id="aged-vinegar-nutrition">栄養成分表示（15mlあたり）</h3>
             <table class="product__table">
               <tbody>
-                <tr><th scope="row">エネルギー</th><td>5kcal</td></tr>
-                <tr><th scope="row">たんぱく質</th><td>0.3g</td></tr>
-                <tr><th scope="row">脂質</th><td>0g</td></tr>
-                <tr><th scope="row">炭水化物</th><td>0.8g</td></tr>
-                <tr><th scope="row">食塩相当量</th><td>0.01g</td></tr>
+                <tr><th scope="row">エネルギー</th><td>kcal</td></tr>
+                <tr><th scope="row">たんぱく質</th><td>g</td></tr>
+                <tr><th scope="row">脂質</th><td>g</td></tr>
+                <tr><th scope="row">炭水化物</th><td>g</td></tr>
+                <tr><th scope="row">食塩相当量</th><td>g</td></tr>
               </tbody>
             </table>
           </section>
         </div>
       </article>
 
-      <article class="product" id="brown-syrup" aria-labelledby="brown-syrup-title">
+      <article class="product" id="brown-syrup" aria-labelledby="brown-syrup-title" tabindex="-1">
         <img class="product__image" src="assets/img/prod_brownsugar.jpg" alt="黒糖シロップの瓶" loading="lazy">
         <div class="product__body">
           <header>
@@ -173,36 +180,36 @@
             <dl class="qa">
               <div class="qa__item">
                 <dt class="qa__question">保存方法は？</dt>
-                <dd class="qa__answer">直射日光を避け、常温で保管してください。開封後は清潔なスプーンを使用し、3か月を目安にお召し上がりください。</dd>
+                <dd class="qa__answer">直射日光を避け、常温で保管してください。開封後は清潔なスプーンを使用し、3か月を目安にお召し上がりください。 </dd>
               </div>
               <div class="qa__item">
-                <dt class="qa__question">固まってしまった場合は？</dt>
-                <dd class="qa__answer">キャップを閉めたまま湯煎で人肌程度に温めると、なめらかに戻ります。</dd>
+                <dt class="qa__question"> 固まってしまった場合は？</dt>
+                <dd class="qa__answer">キャップを閉めたまま湯煎で人肌程度に温めると、なめらかに戻ります。 </dd>
               </div>
             </dl>
           </section>
-          <section aria-labelledby="brown-syrup-nutrition">
-            <h3 class="pillar__title" id="brown-syrup-nutrition">栄養成分表示（20gあたり）</h3>
+          <section aria-labelledby="aged-vinegar-nutrition">
+            <h3 class="pillar__title" id="aged-vinegar-nutrition">栄養成分表示（20gあたり）</h3>
             <table class="product__table">
               <tbody>
-                <tr><th scope="row">エネルギー</th><td>59kcal</td></tr>
-                <tr><th scope="row">たんぱく質</th><td>0g</td></tr>
-                <tr><th scope="row">脂質</th><td>0g</td></tr>
-                <tr><th scope="row">炭水化物</th><td>14.8g</td></tr>
-                <tr><th scope="row">食塩相当量</th><td>0.01g</td></tr>
+                <tr><th scope="row">エネルギー</th><td>kcal</td></tr>
+                <tr><th scope="row">たんぱく質</th><td>g</td></tr>
+                <tr><th scope="row">脂質</th><td>g</td></tr>
+                <tr><th scope="row">炭水化物</th><td>g</td></tr>
+                <tr><th scope="row">食塩相当量</th><td>g</td></tr>
               </tbody>
             </table>
           </section>
         </div>
       </article>
-    </div>
+     </div>
   </main>
 
   <footer class="footer" role="contentinfo">
     <div class="wrapper footer__inner">
       <p class="footer__brand">株式会社 渕脇殖産｜ふちわきや</p>
       <p class="footer__contact">〒890-0034 鹿児島県鹿児島市田上2-5-1／電話：099-250-7623／メール：info@fuchiwaki.jp</p>
-      <p class="footer__copyright">© 2024 Fuchiwaki Shokusan Co., Ltd. All rights reserved.</p>
+      <p class="footer__copyright"> </p>
     </div>
   </footer>
 </body>
