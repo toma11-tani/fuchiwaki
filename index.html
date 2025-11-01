@@ -9,19 +9,19 @@
   <meta property="og:description" content="明治40年創業。鹿児島の素材を活かした健康食品を企画・製造・販売しています。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.fuchiwaki.jp/">
-  <meta property="og:image" content="https://www.fuchiwaki.jp/assets/img/hero_home.jpg">
+  <meta property="og:image" content="https://www.fuchiwaki.jp/assets/img/hero.png">
   <title>株式会社 渕脇殖産｜HOME</title>
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/menu.js" defer></script>
+  <script src="assets/js/home.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="header" role="banner">
     <div class="header__inner">
       <a class="header__logo" href="index.html">
-        <img src="assets/img/logo.png" alt="株式会社 渕脇殖産 ロゴ">
-        <span class="header__brand"><strong>株式会社 渕脇殖産</strong><span>ふちわきや since 1907</span></span>
+        <img src="assets/img/logo.png" alt="ふちわきや ロゴ">
       </a>
       <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
         <span class="hamburger__bar"></span>
@@ -33,7 +33,7 @@
           <li class="nav__item"><a class="nav__link" href="index.html" aria-current="page">HOME</a></li>
           <li class="nav__item"><a class="nav__link" href="products.html">商品紹介</a></li>
           <li class="nav__item"><a class="nav__link" href="about.html">にんたろうとは</a></li>
-          <li class="nav__item"><a class="nav__link" href="blog.html">ブログ</a></li>
+          <li class="nav__item"><a class="nav__link" href="blog.html">SNS・ブログ</a></li>
           <li class="nav__item"><a class="nav__link" href="company.html">会社概要</a></li>
         </ul>
       </nav>
@@ -45,8 +45,9 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__content">
         <span class="hero__tagline">FUCHIWAKIYA</span>
-        <h1 class="hero__title" id="hero-title">家族の真ん中にある商品を。世代を問わず、家族のみんなの健康に寄り添う商品を</h1>
+        <h1 class="hero__title" id="hero-title">ボクと一緒に、家族みんなを元気にしよう！</h1>
         <p class="hero__lead">九州、沖縄の地で育まれた食材を使った商品を販売しています。せっかくなら身体にいいものを。心も身体も温まるご提案。</p>
+        <button class="button hero__greeting-button" id="heroGreeting">👋 いらっしゃいませ！</button>
         <a class="button" href="products.html">商品ラインアップを見る</a>
       </div>
     </section>
@@ -54,8 +55,11 @@
     <section class="section" aria-labelledby="products-digest">
       <div class="wrapper">
         <header class="section__header">
-          <h2 class="section__title" id="products-digest">こだわりの4商品</h2>
-          <p class="section__subtitle">毎日続けやすく、おいしさと安心を両立させたふちわきやの定番品です。</p>
+          <div class="section__nintaro-intro">
+            <img src="assets/img/nintaro.jpg" alt="にんたろう" class="section__nintaro-icon">
+          </div>
+          <h2 class="section__title" id="products-digest">ボクのおすすめ4商品</h2>
+          <p class="section__subtitle">毎日続けやすく、おいしさと安心を両立させたふちわきやの定番品だよ！</p>
         </header>
         <div class="card-grid" role="list">
           <article class="card" role="listitem">
@@ -94,12 +98,20 @@
       </div>
     </section>
 
-    <section class="brand-banner" aria-labelledby="brand-banner-title">
+    <section class="brand-banner nintaro-intro-section" aria-labelledby="brand-banner-title">
       <div class="wrapper">
-        <h2 class="brand-banner__title" id="brand-banner-title">ふちわきやの想い</h2>
-        <p class="lead-text">当社は1907年に木材問屋として創業し、地元鹿児島に根付いてきた会社です。明治・大正・昭和・平成と木材問屋が それぞれの時代の沿った商売を続け現在では「鹿児島から日本中に良いものをお届けすること」をコンセプトに取り組んでおります。今までも そしてこれからも 日本全国の皆様の健康を陰ながらサポートいたします。</p>
-        <div class="brand-banner__actions">
-          <a class="button" href="about.html">にんたろうについても知る</a>
+        <div class="nintaro-intro-content">
+          <div class="nintaro-intro-image">
+            <img src="assets/img/nintaro.jpg" alt="にんたろう" class="nintaro-intro-img">
+          </div>
+          <div class="nintaro-intro-text">
+            <h2 class="brand-banner__title" id="brand-banner-title">はじめまして！にんたろうだよ</h2>
+            <p class="lead-text">ボクは、ふちわきやのアイドル「にんたろう」！にんにくパワーでみんなを元気にするのが大好きなんだ。鹿児島生まれで、地元の素晴らしい食材をもっとたくさんの人に知ってもらいたいと思ってるよ。</p>
+            <p class="lead-text">当社は1907年に創業し、地元鹿児島に根付いてきた会社です。明治・大正・昭和・平成・令和と、それぞれの時代に沿った商売を続け、現在では「鹿児島から日本中に良いものをお届けすること」をコンセプトに取り組んでおります。</p>
+            <div class="brand-banner__actions">
+              <a class="button" href="about.html">ボクのこともっと知って！</a>
+            </div>
+          </div>
         </div>
       </div>
     </section>
