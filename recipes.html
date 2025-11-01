@@ -12,26 +12,33 @@
   <title>レシピ集｜株式会社 渕脇殖産</title>
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/menu.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
   <header class="header" role="banner">
     <div class="header__inner">
       <a class="header__logo" href="index.html">
-        <img src="assets/img/logo.png" alt="株式会社 渕脇殖産 ロゴ">
-        <span class="header__brand"><strong>株式会社 渕脇殖産</strong><span>ふちわきや since 1907</span></span>
+        <img src="assets/img/logo.png" alt="ふちわきや ロゴ">
       </a>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
       <nav class="nav" aria-label="メインメニュー">
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link" href="index.html">HOME</a></li>
           <li class="nav__item"><a class="nav__link" href="products.html">商品紹介</a></li>
+          <li class="nav__item"><a class="nav__link" href="recipes.html" aria-current="page">レシピ</a></li>
           <li class="nav__item"><a class="nav__link" href="about.html">にんたろうとは</a></li>
-          <li class="nav__item"><a class="nav__link" href="blog.html">ブログ</a></li>
+          <li class="nav__item"><a class="nav__link" href="blog.html">SNS・ブログ</a></li>
           <li class="nav__item"><a class="nav__link" href="company.html">会社概要</a></li>
         </ul>
       </nav>
     </div>
   </header>
+  <div class="nav-overlay"></div>
 
   <main id="main">
     <section class="page-hero" aria-labelledby="recipes-title">

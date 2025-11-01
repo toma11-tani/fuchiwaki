@@ -295,6 +295,19 @@ img {
   line-height: 1.6;
 }
 
+.nintaro-greeting {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.nintaro-greeting__image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
 .section__nintaro-intro {
   margin-bottom: 1rem;
 }
@@ -346,6 +359,28 @@ img {
 
 .card__text {
   color: var(--color-subtext);
+}
+
+.company-intro-section {
+  background-color: #fff;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.company-intro {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.company-intro__content {
+  display: grid;
+  gap: 1rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.company-intro__actions {
+  margin-top: 1.5rem;
 }
 
 .brand-banner {
@@ -494,10 +529,12 @@ img {
   object-position: center;
   border-radius: 12px;
   border: 1px solid var(--color-border);
+  margin: 0 auto 1.5rem;
+  display: block;
 }
 
 .product__nintaro {
-  width: min(100%, 280px);
+  width: 140px;
   height: auto;
   object-fit: contain;
 }
@@ -599,6 +636,34 @@ img {
   background-color: #fff;
   border-radius: 16px;
   border: 1px solid var(--color-border);
+  padding: 1.75rem;
+}
+
+.pillar--with-image {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pillar__image-wrapper {
+  width: 100%;
+  background-color: var(--color-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  min-height: 200px;
+}
+
+.pillar__image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: contain;
+}
+
+.pillar__content {
   padding: 1.75rem;
 }
 
@@ -1470,6 +1535,14 @@ main {
     min-height: 600px;
   }
 
+  .nintaro-greeting {
+    margin-bottom: 2.5rem;
+  }
+
+  .nintaro-greeting__image {
+    max-width: 500px;
+  }
+
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1576,19 +1649,21 @@ main {
   }
 
   .product__image-wrapper {
-    flex-direction: row;
+    position: relative;
     justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
     margin-bottom: 1.75rem;
   }
 
   .product__image {
     max-width: 360px;
+    margin: 0 auto 1.75rem;
   }
 
   .product__nintaro {
-    max-width: 240px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 200px;
   }
 
   .product__body {
@@ -1606,6 +1681,25 @@ main {
 
   .pillars {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillar--with-image {
+    flex-direction: row;
+  }
+
+  .pillar__image-wrapper {
+    width: 40%;
+    min-height: 250px;
+    padding: 2rem;
+  }
+
+  .pillar__image {
+    max-width: 100%;
+  }
+
+  .pillar__content {
+    width: 60%;
+    padding: 2rem;
   }
 
   .access {
@@ -1730,6 +1824,14 @@ main {
     background-size: cover;
   }
 
+  .nintaro-greeting {
+    margin-bottom: 3rem;
+  }
+
+  .nintaro-greeting__image {
+    max-width: 600px;
+  }
+
   .header__inner {
     padding: 0.75rem 2.5rem;
   }
@@ -1775,16 +1877,19 @@ main {
   }
 
   .product__image-wrapper {
-    gap: 2.5rem;
     margin-bottom: 2rem;
   }
 
   .product__image {
     max-width: 380px;
+    margin: 0 auto 2rem;
   }
 
   .product__nintaro {
-    max-width: 280px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 240px;
   }
 
   .product__title {
@@ -1800,7 +1905,22 @@ main {
   }
 
   .pillars {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillar--with-image {
+    flex-direction: column;
+  }
+
+  .pillar__image-wrapper {
+    width: 100%;
+    min-height: 220px;
+    padding: 2rem;
+  }
+
+  .pillar__content {
+    width: 100%;
+    padding: 2rem;
   }
 
   .profile-grid {
