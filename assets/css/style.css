@@ -545,6 +545,18 @@ img {
   gap: 1.5rem;
 }
 
+.product__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.product__recipe-link {
+  flex-shrink: 0;
+}
+
 .product__title {
   font-size: 1.5rem;
   color: var(--color-brown);
