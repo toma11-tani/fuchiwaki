@@ -437,6 +437,10 @@ img {
   background: linear-gradient(135deg, rgba(184, 155, 94, 0.2), rgba(156, 107, 74, 0.2));
 }
 
+.page-hero.products-hero {
+  background: transparent;
+}
+
 .page-hero__title {
   font-size: 2rem;
   margin-bottom: 0.75rem;
