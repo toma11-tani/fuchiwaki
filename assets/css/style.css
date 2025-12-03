@@ -438,7 +438,7 @@ img {
 }
 
 .page-hero.products-hero {
-  background: transparent;
+  background: #fff;
 }
 
 .page-hero__title {
@@ -558,7 +558,12 @@ img {
 }
 
 .product__recipe-link {
-  flex-shrink: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+.product__recipe-link .button {
+  width: 100%;
 }
 
 .product__title {
@@ -1157,6 +1162,15 @@ main {
 
   .recipe-card__body {
     padding: 1rem;
+  }
+
+  .product__actions {
+    flex-direction: column;
+  }
+
+  .product__recipe-link {
+    flex: none;
+    width: 100%;
   }
 }
 
