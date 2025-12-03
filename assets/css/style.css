@@ -1078,6 +1078,8 @@ main {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .recipe-card {
@@ -1086,6 +1088,8 @@ main {
   border: 1px solid var(--color-border);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .recipe-card:hover {
@@ -1097,13 +1101,18 @@ main {
   display: block;
   text-decoration: none;
   color: inherit;
+  width: 100%;
+  max-width: 100%;
 }
 
 .recipe-card__image {
   width: 100%;
+  max-width: 100%;
+  height: auto;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
 .recipe-card__body {
@@ -1134,6 +1143,21 @@ main {
 
 .recipe-card__text:empty {
   display: none;
+}
+
+/* スマホ向けの調整 */
+@media (max-width: 719px) {
+  .recipe-grid {
+    gap: 1rem;
+  }
+
+  .recipe-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .recipe-card__body {
+    padding: 1rem;
+  }
 }
 
 .profile-book {
