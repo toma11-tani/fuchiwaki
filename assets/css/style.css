@@ -1068,7 +1068,11 @@ main {
   min-height: 100vh;
 }
 
-body:has(.products-main) {
+body.products-page {
+  background-color: #fff;
+}
+
+html.products-page {
   background-color: #fff;
 }
 
