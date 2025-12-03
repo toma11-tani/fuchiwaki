@@ -812,6 +812,102 @@ img {
   border: 1px solid var(--color-border);
 }
 
+.forest-hero-section {
+  padding: 0;
+  background: linear-gradient(180deg, rgba(250, 250, 247, 0.95) 0%, rgba(250, 250, 247, 0.98) 100%);
+}
+
+.forest-hero-section__header {
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+}
+
+.forest-hero-section__title {
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-brown);
+}
+
+.forest-hero-section__lead {
+  color: var(--color-subtext);
+  font-size: 0.9375rem;
+}
+
+.forest-hero-gallery {
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+  padding-bottom: 1rem;
+}
+
+.forest-hero-gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.forest-hero-gallery__inner {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0 1rem 0.5rem;
+  min-width: min-content;
+  align-items: flex-end;
+}
+
+.forest-hero-gallery__item {
+  flex-shrink: 0;
+  width: 75vw;
+  max-width: 320px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.forest-hero-gallery__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.forest-business {
+  display: grid;
+  gap: 2rem;
+}
+
+.forest-business__image {
+  width: 100%;
+}
+
+.forest-business__img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+}
+
+.forest-gallery {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.forest-gallery__item {
+  width: 100%;
+}
+
+.forest-gallery__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+}
+
 .flow {
   display: grid;
   gap: 1.5rem;
@@ -825,6 +921,30 @@ img {
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+}
+
+.flow__item--with-image {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.flow__image-wrapper {
+  width: 100%;
+  margin-bottom: 1rem;
+  order: -1;
+}
+
+.flow__image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+}
+
+.flow__item--with-image .flow__number {
+  align-self: flex-start;
 }
 
 .flow__number {
@@ -1854,6 +1974,56 @@ main {
     font-size: 1.25rem;
   }
 
+  .flow__item--with-image {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .flow__image-wrapper {
+    width: 40%;
+    margin-bottom: 0;
+    order: 0;
+  }
+
+  .flow__item--with-image .flow__number {
+    align-self: flex-start;
+  }
+
+  .forest-business {
+    grid-template-columns: 1fr 1.5fr;
+    align-items: start;
+  }
+
+  .forest-business__img {
+    aspect-ratio: 3 / 4;
+  }
+
+  .forest-hero-section__header {
+    padding: 2.5rem 1.5rem 2rem;
+  }
+
+  .forest-hero-section__title {
+    font-size: 2rem;
+  }
+
+  .forest-hero-section__lead {
+    font-size: 1rem;
+  }
+
+  .forest-hero-gallery__inner {
+    padding: 0 1.5rem 0.5rem;
+    gap: 1rem;
+  }
+
+  .forest-hero-gallery__item {
+    width: 60vw;
+    max-width: 400px;
+  }
+
+  .forest-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .access {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: start;
@@ -2114,6 +2284,40 @@ main {
 
   .flow__title {
     font-size: 1.375rem;
+  }
+
+  .flow__image-wrapper {
+    width: 35%;
+  }
+
+  .forest-hero-section__header {
+    padding: 3rem 2rem 2.5rem;
+  }
+
+  .forest-hero-section__title {
+    font-size: 2.25rem;
+  }
+
+  .forest-hero-section__lead {
+    font-size: 1.0625rem;
+  }
+
+  .forest-hero-gallery__inner {
+    padding: 0 2rem 0.5rem;
+    gap: 1.25rem;
+  }
+
+  .forest-hero-gallery__item {
+    width: 50vw;
+    max-width: 480px;
+  }
+
+  .forest-business {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .forest-gallery {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .social-header-with-nintaro {
