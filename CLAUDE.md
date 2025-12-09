@@ -1,10 +1,14 @@
 # CLAUDE.md
 
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 このファイルは、Claude Code (claude.ai/code) がこのリポジトリで作業する際のガイダンスを提供します。
 
 ## プロジェクト概要
 
 フチワキヤは健康食品会社の静的Webサイトです。ビルドツールやフレームワークを使わず、素のHTML5、CSS3、JavaScript (ES6+) で構築されています。コメントとコンテンツはすべて日本語です。
+
+**依存関係**: `@google/generative-ai` (Node.js 18.0.0以上) - 将来的なAI機能統合用
 
 ## 開発コマンド
 
@@ -82,3 +86,8 @@ PR前の手動テストチェックリスト:
 - 実施した検証手順を記載
 - 残タスクがあればリスト化
 - 無関係な変更は別コミットに分離
+
+## 関連ドキュメント
+
+- `AGENTS.md` - 追加のリポジトリガイドライン（より詳細な実装ノート）
+- `README.md` - 最小限のプロジェクト識別子
