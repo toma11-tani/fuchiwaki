@@ -1,22 +1,27 @@
 (function () {
   'use strict';
 
-  // 商品スライダーの初期化
-  const sliders = document.querySelectorAll('.product__slider');
+  // スライダーの初期化（商品ページとforestページ両対応）
+  const sliders = document.querySelectorAll('.product__slider, .forest__slider');
   if (!sliders.length) return;
 
   sliders.forEach(slider => {
-    const images = slider.querySelectorAll('.product__slider-image');
-    const dots = slider.querySelectorAll('.product__slider-dot');
-    const prevBtn = slider.querySelector('.product__slider-btn--prev');
-    const nextBtn = slider.querySelector('.product__slider-btn--next');
+    // スライダーのタイプを判定（product または forest）
+    const sliderType = slider.classList.contains('product__slider') ? 'product' : 'forest';
+    const prefix = sliderType === 'product' ? '.product__slider' : '.forest__slider';
+
+    const images = slider.querySelectorAll(`${prefix}-image`);
+    const dots = slider.querySelectorAll(`${prefix}-dot`);
+    const prevBtn = slider.querySelector(`${prefix}-btn--prev`);
+    const nextBtn = slider.querySelector(`${prefix}-btn--next`);
     let currentIndex = 0;
 
     // 画像が1枚のみの場合、ナビゲーションを非表示
     if (images.length <= 1) {
       if (prevBtn) prevBtn.style.display = 'none';
       if (nextBtn) nextBtn.style.display = 'none';
-      slider.querySelector('.product__slider-dots').style.display = 'none';
+      const dotsContainer = slider.querySelector(`${prefix}-dots`);
+      if (dotsContainer) dotsContainer.style.display = 'none';
       return;
     }
 

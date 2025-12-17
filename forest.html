@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/menu.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
 </head>
 <body class="white-bg">
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -50,26 +51,23 @@
         </div>
       </div>
       <div class="forest-hero-gallery">
-        <div class="forest-hero-gallery__inner">
-          <div class="forest-hero-gallery__item">
-            <img src="assets/img/yama1.JPG" alt="立木・山林の風景1" class="forest-hero-gallery__image" loading="lazy">
+        <div class="forest__slider">
+          <div class="forest__slider-images">
+            <img src="assets/img/yama1.JPG" alt="立木・山林の風景1" class="forest__slider-image active" loading="lazy">
+            <img src="assets/img/yama2.JPG" alt="立木・山林の風景2" class="forest__slider-image" loading="lazy">
+            <img src="assets/img/yama3.JPG" alt="立木・山林の風景3" class="forest__slider-image" loading="lazy">
+            <img src="assets/img/yama4.JPG" alt="立木・山林の風景4" class="forest__slider-image" loading="lazy">
+            <img src="assets/img/yama5.JPG" alt="立木・山林の風景5" class="forest__slider-image" loading="lazy">
           </div>
-          <div class="forest-hero-gallery__item">
-            <img src="assets/img/yama2.JPG" alt="立木・山林の風景2" class="forest-hero-gallery__image" loading="lazy">
+          <button class="forest__slider-btn forest__slider-btn--prev" aria-label="前の画像">‹</button>
+          <button class="forest__slider-btn forest__slider-btn--next" aria-label="次の画像">›</button>
+          <div class="forest__slider-dots">
+            <button class="forest__slider-dot active" aria-label="画像 1"></button>
+            <button class="forest__slider-dot" aria-label="画像 2"></button>
+            <button class="forest__slider-dot" aria-label="画像 3"></button>
+            <button class="forest__slider-dot" aria-label="画像 4"></button>
+            <button class="forest__slider-dot" aria-label="画像 5"></button>
           </div>
-          <div class="forest-hero-gallery__item">
-            <img src="assets/img/yama3.JPG" alt="立木・山林の風景3" class="forest-hero-gallery__image" loading="lazy">
-          </div>
-          <div class="forest-hero-gallery__item">
-            <img src="assets/img/yama4.JPG" alt="立木・山林の風景4" class="forest-hero-gallery__image" loading="lazy">
-          </div>
-          <div class="forest-hero-gallery__item">
-            <img src="assets/img/yama5.JPG" alt="立木・山林の風景5" class="forest-hero-gallery__image" loading="lazy">
-          </div>
-        </div>
-        <div class="forest-hero-gallery__hint">
-          <span class="forest-hero-gallery__hint-icon">→</span>
-          <span class="forest-hero-gallery__hint-text">スクロールしてご覧ください</span>
         </div>
       </div>
     </section>
