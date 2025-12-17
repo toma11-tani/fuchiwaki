@@ -928,7 +928,7 @@ img {
 
 .forest__slider {
   position: relative;
-  width: min(100%, 720px);
+  width: min(100%, 540px);
   margin: 0 auto;
 }
 
@@ -2212,7 +2212,7 @@ html.white-bg {
   }
 
   .forest__slider {
-    width: min(100%, 860px);
+    width: min(100%, 640px);
   }
 
   .forest-gallery {
@@ -2498,7 +2498,7 @@ html.white-bg {
   }
 
   .forest__slider {
-    width: min(100%, 960px);
+    width: min(100%, 720px);
   }
 
   .forest__slider-btn {
