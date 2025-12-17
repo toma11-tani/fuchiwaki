@@ -340,7 +340,7 @@ img {
 
 .card__image {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
 }
@@ -533,7 +533,7 @@ img {
 
 .product__image {
   width: min(100%, 420px);
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center;
   border-radius: 12px;
