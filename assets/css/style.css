@@ -1073,12 +1073,10 @@ main {
   min-height: 100vh;
 }
 
-body.products-page,
 body.white-bg {
   background-color: #fff;
 }
 
-html.products-page,
 html.white-bg {
   background-color: #fff;
 }
