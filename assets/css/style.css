@@ -26,6 +26,17 @@ img {
   height: auto;
 }
 
+/* レスポンシブ改行: PC表示時は非表示、スマホ表示時のみ表示 */
+.sp-br {
+  display: none;
+}
+
+@media screen and (max-width: 719px) {
+  .sp-br {
+    display: inline;
+  }
+}
+
 .wrapper {
   max-width: 1100px;
   margin: 0 auto;
