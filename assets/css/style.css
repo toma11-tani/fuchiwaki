@@ -350,6 +350,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  flex: 1;
 }
 
 .card__title {
@@ -359,6 +360,10 @@ img {
 
 .card__text {
   color: var(--color-subtext);
+}
+
+.card__body .button {
+  margin-top: auto;
 }
 
 .company-intro-section {
@@ -1068,11 +1073,13 @@ main {
   min-height: 100vh;
 }
 
-body.products-page {
+body.products-page,
+body.white-bg {
   background-color: #fff;
 }
 
-html.products-page {
+html.products-page,
+html.white-bg {
   background-color: #fff;
 }
 
