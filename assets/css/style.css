@@ -2694,13 +2694,13 @@ html.white-bg {
 .profile2-left {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 8px;
 }
 
 .profile2-dot {
   font-size: 18px;
   line-height: 1;
-  color: var(--color-text, #2A2A2A);
+  color: var(--color-brown, #9C6B4A);
 }
 
 .profile2-title {
@@ -2718,7 +2718,7 @@ html.white-bg {
   margin: 0;
   font-weight: 800;
   color: var(--color-text, #2A2A2A);
-  font-size: clamp(22px, 2.8vw, 34px);
+  font-size: clamp(18px, 2.2vw, 26px);
   letter-spacing: 0.02em;
 }
 
@@ -2771,5 +2771,19 @@ html.white-bg {
 @media (max-width: 899px) {
   .profile2-row {
     display: block;
+  }
+
+  .profile2-left {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-brown, #9C6B4A);
+  }
+
+  .profile2-right {
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--color-border, #E0D9CE);
+  }
+
+  .profile2-rule {
+    display: none;
   }
 }
