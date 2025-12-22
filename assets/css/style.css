@@ -2682,3 +2682,94 @@ html.white-bg {
     font-size: 0.75rem;
   }
 }
+/* にんたろうプロフィール（新UI） */
+.profile2 {
+  margin-top: 10px;
+}
+
+.profile2-row {
+  padding: 28px 0 18px;
+}
+
+.profile2-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile2-dot {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-text, #2A2A2A);
+}
+
+.profile2-title {
+  margin: 0;
+  font-weight: 800;
+  color: var(--color-brown, #9C6B4A);
+  font-size: clamp(18px, 2.2vw, 28px);
+}
+
+.profile2-right {
+  margin-top: 10px;
+}
+
+.profile2-value {
+  margin: 0;
+  font-weight: 800;
+  color: var(--color-text, #2A2A2A);
+  font-size: clamp(22px, 2.8vw, 34px);
+  letter-spacing: 0.02em;
+}
+
+.profile2-note {
+  margin: 8px 0 0;
+  font-size: 0.875rem;
+  color: var(--color-subtext, #555555);
+  font-weight: 400;
+}
+
+.profile2-rule {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.profile2-accent {
+  width: 34%;
+  max-width: 520px;
+  height: 4px;
+  background: var(--color-brown, #9C6B4A);
+  border-radius: 999px;
+}
+
+.profile2-line {
+  flex: 1;
+  height: 2px;
+  background: var(--color-border, #E0D9CE);
+}
+
+@media (min-width: 900px) {
+  .profile2-row {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    column-gap: 56px;
+    align-items: center;
+  }
+
+  .profile2-right {
+    margin-top: 0;
+  }
+
+  .profile2-rule {
+    grid-column: 1 / -1;
+    margin-top: 22px;
+  }
+}
+
+@media (max-width: 899px) {
+  .profile2-row {
+    display: block;
+  }
+}
