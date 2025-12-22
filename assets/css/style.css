@@ -2707,7 +2707,7 @@ html.white-bg {
   margin: 0;
   font-weight: 800;
   color: var(--color-brown, #9C6B4A);
-  font-size: clamp(18px, 2.2vw, 28px);
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 .profile2-right {
@@ -2718,7 +2718,7 @@ html.white-bg {
   margin: 0;
   font-weight: 800;
   color: var(--color-text, #2A2A2A);
-  font-size: clamp(18px, 2.2vw, 26px);
+  font-size: clamp(16px, 2vw, 22px);
   letter-spacing: 0.02em;
 }
 
