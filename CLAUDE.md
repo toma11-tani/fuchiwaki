@@ -138,11 +138,23 @@ document.addEventListener('DOMContentLoaded', () => {
        <time class="blog-card__date" datetime="YYYY-MM-DD">YYYY年MM月DD日</time>
        <h3 class="blog-card__title">記事のタイトル</h3>
        <p class="blog-card__text">記事の概要</p>
-       <a class="blog-card__link" href="#">続きを読む →</a>
+       <a class="blog-card__link" href="blog-post-YYYYMMDD.html">続きを読む →</a>
      </div>
    </article>
    ```
 3. 最新の記事が上に来るように並べる（新しい記事を先頭に追加）
+
+**ブログ記事ページの作成方法:**
+1. `blog-post-template.html` をコピーして新しいファイルを作成
+   - ファイル名: `blog-post-YYYYMMDD.html`（例: `blog-post-20251228.html`）
+2. テンプレート内の以下の項目を編集:
+   - `<meta>` タグ: タイトル、説明、画像URL
+   - `<time>` タグ: 投稿日（`datetime="YYYY-MM-DD"` と表示テキスト）
+   - `<h1>` タグ: 記事タイトル
+   - アイキャッチ画像: `src="assets/img/blog_X.jpg"`
+   - 記事本文: `.blog-post__content` 内のコンテンツ
+3. 画像を `assets/img/` に追加（サムネイル、アイキャッチ、本文内画像）
+4. blog.htmlのカードリンクを記事ページのURLに設定
 
 ## テスト要件
 

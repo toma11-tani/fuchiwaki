@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js white-bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="記事の概要を入力してください（150文字程度）">
+  <meta property="og:title" content="記事のタイトル｜株式会社 渕脇殖産">
+  <meta property="og:description" content="記事の概要を入力してください">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.fuchiwaki.jp/blog-post-YYYYMMDD.html">
+  <meta property="og:image" content="https://www.fuchiwaki.jp/assets/img/blog_X.jpg">
+  <title>記事のタイトル｜株式会社 渕脇殖産</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/menu.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="white-bg">
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a class="header__logo" href="index.html">
+        <img src="assets/img/logo.png" alt="ふちわきや ロゴ">
+      </a>
+      <button class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+        <span class="hamburger__bar"></span>
+      </button>
+      <nav class="nav" id="global-nav" aria-label="メインメニュー">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="index.html">HOME</a></li>
+          <li class="nav__item"><a class="nav__link" href="products.html">商品紹介</a></li>
+          <li class="nav__item"><a class="nav__link" href="recipes.html">レシピ</a></li>
+          <li class="nav__item"><a class="nav__link" href="about.html">にんたろうとは</a></li>
+          <li class="nav__item"><a class="nav__link" href="blog.html" aria-current="page">SNS・ブログ</a></li>
+          <li class="nav__item"><a class="nav__link" href="company.html">会社概要</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <main id="main">
+    <article class="blog-post">
+      <div class="wrapper">
+        <!-- ブログ一覧に戻るリンク -->
+        <div class="blog-post__breadcrumb">
+          <a href="blog.html" class="blog-post__back-link">← ブログ一覧に戻る</a>
+        </div>
+
+        <!-- 記事ヘッダー -->
+        <header class="blog-post__header">
+          <time class="blog-post__date" datetime="YYYY-MM-DD">YYYY年MM月DD日</time>
+          <h1 class="blog-post__title">記事のタイトルをここに入力</h1>
+        </header>
+
+        <!-- アイキャッチ画像（オプション） -->
+        <div class="blog-post__image-wrapper">
+          <img src="assets/img/blog_X.jpg" alt="記事のアイキャッチ画像" class="blog-post__image">
+        </div>
+
+        <!-- 記事本文 -->
+        <div class="blog-post__content">
+          <!-- ここに記事の内容を書いてください -->
+
+          <p class="lead-text">記事の導入文を書きます。この部分は大きめの文字で表示されます。</p>
+
+          <h2>見出し2（セクション見出し）</h2>
+          <p>本文のテキストをここに書きます。段落を分けたい場合は、新しい&lt;p&gt;タグで囲みます。</p>
+          <p>改行したい場合は&lt;br&gt;タグを使用します。<br>このように改行されます。</p>
+
+          <h3>見出し3（サブセクション見出し）</h3>
+          <p>より詳細な内容を書く場合に使用します。</p>
+
+          <!-- 画像を挿入する場合 -->
+          <figure class="blog-post__figure">
+            <img src="assets/img/blog_content_1.jpg" alt="画像の説明" class="blog-post__content-image">
+            <figcaption class="blog-post__caption">画像のキャプション（説明文）</figcaption>
+          </figure>
+
+          <!-- リストを使う場合 -->
+          <h3>ポイント</h3>
+          <ul class="blog-post__list">
+            <li>ポイント1</li>
+            <li>ポイント2</li>
+            <li>ポイント3</li>
+          </ul>
+
+          <!-- 引用を使う場合 -->
+          <blockquote class="blog-post__quote">
+            引用したい文章をここに書きます。
+          </blockquote>
+
+          <p>記事の締めくくりの文章を書きます。</p>
+
+          <!-- 関連リンク（オプション） -->
+          <div class="blog-post__related">
+            <h3>関連リンク</h3>
+            <ul class="blog-post__link-list">
+              <li><a href="products.html">商品紹介ページ</a></li>
+              <li><a href="recipes.html">レシピページ</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ブログ一覧に戻るリンク（記事下） -->
+        <div class="blog-post__footer">
+          <a href="blog.html" class="button">ブログ一覧に戻る</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="wrapper footer__inner">
+      <p class="footer__brand">株式会社 渕脇殖産｜ふちわきや</p>
+      <p class="footer__contact">〒890-0034 鹿児島県鹿児島市田上2-5-1／電話：099-250-7623／メール：info@fuchiwaki.jp</p>
+      <p class="footer__copyright">&copy; 2025 株式会社 渕脇殖産 All Rights Reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
