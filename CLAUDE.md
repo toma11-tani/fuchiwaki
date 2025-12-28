@@ -125,6 +125,25 @@ document.addEventListener('DOMContentLoaded', () => {
 - 特長セクション: `<p class="lead-text">`を使用（`<ul>`ではない）
 - テキストのインデントは他のセクションと揃える
 
+**ブログ投稿の追加方法（blog.html）:**
+1. 投稿がない場合: `.blog-empty` セクションが「準備中」メッセージを表示
+2. 投稿を追加する場合:
+   - `.blog-empty` セクションを削除
+   - コメントアウトされている `.blog-grid` セクションのコメントを外す
+   - テンプレートをコピーして新しい記事を追加
+   ```html
+   <article class="blog-card">
+     <img class="blog-card__image" src="assets/img/blog_X.jpg" alt="記事のサムネイル" loading="lazy">
+     <div class="blog-card__body">
+       <time class="blog-card__date" datetime="YYYY-MM-DD">YYYY年MM月DD日</time>
+       <h3 class="blog-card__title">記事のタイトル</h3>
+       <p class="blog-card__text">記事の概要</p>
+       <a class="blog-card__link" href="#">続きを読む →</a>
+     </div>
+   </article>
+   ```
+3. 最新の記事が上に来るように並べる（新しい記事を先頭に追加）
+
 ## テスト要件
 
 PR前の手動テストチェックリスト:
