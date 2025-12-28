@@ -767,15 +767,15 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  min-height: 200px;
+  padding: 0.5rem;
+  height: 220px;
+  overflow: hidden;
 }
 
 .pillar__image {
   width: 100%;
-  max-width: 300px;
-  height: auto;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
 }
 
 .pillar__content {
@@ -2159,8 +2159,8 @@ html.white-bg {
 
   .pillar__image-wrapper {
     width: 40%;
-    min-height: 250px;
-    padding: 2rem;
+    height: 280px;
+    padding: 0.75rem;
   }
 
   .pillar__image {
@@ -2460,17 +2460,22 @@ html.white-bg {
   }
 
   .pillars {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .pillar--with-image {
     flex-direction: column;
   }
 
+  .forest__slider-image {
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
   .pillar__image-wrapper {
     width: 100%;
-    min-height: 220px;
-    padding: 2rem;
+    height: 260px;
+    padding: 0.75rem;
   }
 
   .pillar__content {
