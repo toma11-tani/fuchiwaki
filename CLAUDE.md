@@ -36,6 +36,8 @@ git status -sb
 ### ファイル構成
 - HTMLページはリポジトリルートに配置（静的ホスティング互換性のため）
   - `index.html`, `about.html`, `products.html`, `recipes.html`, `blog.html`, `company.html`, `forest.html`
+  - `blog-post-template.html` - ブログ記事のテンプレート（コピーして使用）
+  - `blog-post-YYYYMMDD.html` - 個別のブログ記事ページ（例: `blog-post-20260101.html`）
 - `assets/css/` - スタイル（reset.cssでブラウザ正規化、style.cssでコンポーネント管理）
 - `assets/js/` - 機能別にスコープされたJavaScriptモジュール
 - `assets/img/`, `assets/svg/`, `assets/video/` - メディアアセット（`img/products/`のようにサブディレクトリで整理）
@@ -49,6 +51,7 @@ git status -sb
 **ページ固有スクリプト:**
 - `home.js` - ホームページのインタラクティブ要素（#heroGreeting ボタン、ランダムメッセージ表示）
 - `about.js` - にんたろうキャラクターアニメーション（クリックイベント、ハート生成、スクロールエフェクト）
+- `products.js` - 商品ページとforestページの画像スライダー（`.product__slider`, `.forest__slider`）
 
 **重要な実装ノート:**
 - 2つの異なるメニュー実装が共存: `main.js`（ARIA）と`menu.js`（クラスベース）
@@ -118,12 +121,20 @@ document.addEventListener('DOMContentLoaded', () => {
 **改行の使い方:**
 - 文中の改行: `<br>`を使用
 - 段落間の区切り: `<br><br>`を使用（より大きな空白）
+- レスポンシブ改行: `<br class="sp-br">`を使用（スマホのみ表示、PC画面では非表示）
 - パソコンとスマホ両方での可読性を考慮して改行位置を決定
 
 **商品ページの構造:**
 - 商品説明: `<p class="lead-text">`を使用
 - 特長セクション: `<p class="lead-text">`を使用（`<ul>`ではない）
 - テキストのインデントは他のセクションと揃える
+- 画像スライダー: 複数画像がある場合は`.product__slider`を使用（前後ボタン、ドット表示）
+
+**会社概要ページ（company.html）の事業内容:**
+- `.pillars`グリッドレイアウト: モバイル1列、タブレット2列、デスクトップ3列（1024px+）
+- `.pillar--with-image`構造: 画像ラッパー + コンテンツ
+- 画像サイズ: 固定高さ（モバイル220px、タブレット280px、デスクトップ260px）、`object-fit: cover`
+- 画像余白: 最小限（0.5rem / 0.75rem）で画像を大きく表示
 
 **ブログ投稿の追加方法（blog.html）:**
 1. 投稿がない場合: `.blog-empty` セクションが「準備中」メッセージを表示
@@ -155,6 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
    - 記事本文: `.blog-post__content` 内のコンテンツ
 3. 画像を `assets/img/` に追加（サムネイル、アイキャッチ、本文内画像）
 4. blog.htmlのカードリンクを記事ページのURLに設定
+
+**forestページの画像表示:**
+- `.forest__slider`で複数の山林画像をスライダー表示
+- デスクトップ表示時は`max-width: 450px`で中央配置（コンパクトに表示）
+- モバイルは画面幅いっぱいに表示
 
 ## テスト要件
 
