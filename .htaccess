@@ -1,0 +1,30 @@
+# 301リダイレクト設定
+# 旧HTMLファイルから新しいディレクトリ構造へのリダイレクト
+
+# RewriteEngineを有効化
+RewriteEngine On
+
+# wwwありからwww無しへのリダイレクト（既存設定の確認用）
+RewriteCond %{HTTP_HOST} ^www\.fuchiwaki\.jp$ [NC]
+RewriteRule ^(.*)$ https://fuchiwaki.jp/$1 [R=301,L]
+
+# 旧HTMLファイルから新しいディレクトリURLへのリダイレクト
+Redirect 301 /about.html /about/
+Redirect 301 /blog.html /blog/
+Redirect 301 /products.html /products/
+Redirect 301 /recipes.html /recipes/
+Redirect 301 /forest.html /forest/
+Redirect 301 /company.html /company/
+
+# ブログ記事のリダイレクト
+Redirect 301 /blog-post-20260101.html /blog/2026-01-01/
+Redirect 301 /blog-post-template.html /blog/_template/
+
+# 旧Shopify URLからのリダイレクト（会社概要ページ）
+Redirect 301 /pages/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81 /company/
+Redirect 301 /pages/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81/ /company/
+
+# クリーンURLの設定（index.htmlを非表示）
+# /about/index.html へのアクセスを /about/ にリダイレクト
+RewriteCond %{THE_REQUEST} ^GET\ /[^/]+/index\.html
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
