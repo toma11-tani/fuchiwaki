@@ -5,7 +5,12 @@
 RewriteEngine On
 
 # 旧Shopify URLからのリダイレクト（会社概要ページ）- クエリパラメータ付きにも対応
+# URLエンコードされた形式
 RewriteCond %{REQUEST_URI} ^/pages/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81/? [NC]
+RewriteRule .* /company/? [R=301,L]
+
+# 日本語そのままの形式
+RewriteCond %{REQUEST_URI} ^/pages/会社概要/? [NC]
 RewriteRule .* /company/? [R=301,L]
 
 # wwwありからwww無しへのリダイレクト
