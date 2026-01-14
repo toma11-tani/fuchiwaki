@@ -4,7 +4,11 @@
 # RewriteEngineを有効化
 RewriteEngine On
 
-# wwwありからwww無しへのリダイレクト（既存設定の確認用）
+# 旧Shopify URLからのリダイレクト（会社概要ページ）- クエリパラメータ付きにも対応
+RewriteCond %{REQUEST_URI} ^/pages/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81/?$ [NC]
+RewriteRule .* /company/? [R=301,L]
+
+# wwwありからwww無しへのリダイレクト
 RewriteCond %{HTTP_HOST} ^www\.fuchiwaki\.jp$ [NC]
 RewriteRule ^(.*)$ https://fuchiwaki.jp/$1 [R=301,L]
 
@@ -19,10 +23,6 @@ Redirect 301 /company.html /company/
 # ブログ記事のリダイレクト
 Redirect 301 /blog-post-20260101.html /blog/2026-01-01/
 Redirect 301 /blog-post-template.html /blog/_template/
-
-# 旧Shopify URLからのリダイレクト（会社概要ページ）
-Redirect 301 /pages/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81 /company/
-Redirect 301 /pages/%E4%BC%9A%E7%A4%BE%E6%A6%82%E8%A6%81/ /company/
 
 # クリーンURLの設定（index.htmlを非表示）
 # /about/index.html へのアクセスを /about/ にリダイレクト
