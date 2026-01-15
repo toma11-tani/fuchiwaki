@@ -23,8 +23,8 @@ RewriteRule ^pages/.* /company/? [R=301,L]
 RewriteCond %{REQUEST_URI} ^/products/.+
 RewriteRule ^products/.+ /products/? [R=301,L]
 
-# /brogs/ （typo）を /blog/ にリダイレクト
-RewriteRule ^brogs/?(.*)$ /blog/$1 [R=301,L]
+# /blogs/ を /blog/ にリダイレクト
+RewriteRule ^blogs/?(.*)$ /blog/$1 [R=301,L]
 
 # 旧HTMLファイルから新しいディレクトリURLへのリダイレクト
 Redirect 301 /about.html /about/
