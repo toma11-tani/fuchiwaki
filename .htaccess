@@ -3,18 +3,28 @@
 
 # RewriteEngineを有効化
 RewriteEngine On
+RewriteBase /
 
 # UTF-8エンコーディングを明示的に設定
 AddDefaultCharset UTF-8
 
-# 旧Shopify URLからのリダイレクト（会社概要ページ）
-# /pages/ 配下のすべてのURLを /company/ にリダイレクト（日本語エンコーディング問題を回避）
+# DirectoryIndexの明示的な設定
+DirectoryIndex index.html
+
+# wwwありからwww無しへのリダイレクト（最優先で実行）
+RewriteCond %{HTTP_HOST} ^www\.fuchiwaki\.jp$ [NC]
+RewriteRule ^(.*)$ https://fuchiwaki.jp/$1 [R=301,L]
+
+# /pages/ 配下のすべてのURLを /company/ にリダイレクト
 RewriteCond %{REQUEST_URI} ^/pages/
 RewriteRule ^pages/.* /company/? [R=301,L]
 
-# wwwありからwww無しへのリダイレクト
-RewriteCond %{HTTP_HOST} ^www\.fuchiwaki\.jp$ [NC]
-RewriteRule ^(.*)$ https://fuchiwaki.jp/$1 [R=301,L]
+# /products/ 配下のサブパスを /products/ にリダイレクト
+RewriteCond %{REQUEST_URI} ^/products/.+
+RewriteRule ^products/.+ /products/? [R=301,L]
+
+# /brogs/ （typo）を /blog/ にリダイレクト
+RewriteRule ^brogs/?(.*)$ /blog/$1 [R=301,L]
 
 # 旧HTMLファイルから新しいディレクトリURLへのリダイレクト
 Redirect 301 /about.html /about/
