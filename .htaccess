@@ -4,10 +4,6 @@
 # RewriteEngineを有効化
 RewriteEngine On
 
-# wwwありからwww無しへのリダイレクト
-RewriteCond %{HTTP_HOST} ^www\.fuchiwaki\.jp$ [NC]
-RewriteRule ^(.*)$ https://fuchiwaki.jp/$1 [R=301,L]
-
 # /pages/ 配下のすべてのURLを /company/ にリダイレクト
 RewriteCond %{REQUEST_URI} ^/pages/
 RewriteRule ^pages/.* /company/? [R=301,L]
@@ -15,6 +11,10 @@ RewriteRule ^pages/.* /company/? [R=301,L]
 # /products/ 配下のサブパスを /products/ にリダイレクト
 RewriteCond %{REQUEST_URI} ^/products/.+
 RewriteRule ^products/.+ /products/? [R=301,L]
+
+# /collections/ 配下のサブパスを /products/ にリダイレクト
+RewriteCond %{REQUEST_URI} ^/collections/.+
+RewriteRule ^collections/.+ /products/? [R=301,L]
 
 # /blogs/ 配下を shop.fuchiwaki.jp/blogs/ にリダイレクト（パスを保持）
 RewriteRule ^blogs/?(.*)$ https://shop.fuchiwaki.jp/blogs/$1 [R=301,L]
