@@ -3,15 +3,8 @@
 
 # RewriteEngineを有効化
 RewriteEngine On
-RewriteBase /
 
-# UTF-8エンコーディングを明示的に設定
-AddDefaultCharset UTF-8
-
-# DirectoryIndexの明示的な設定
-DirectoryIndex index.html
-
-# wwwありからwww無しへのリダイレクト（最優先で実行）
+# wwwありからwww無しへのリダイレクト
 RewriteCond %{HTTP_HOST} ^www\.fuchiwaki\.jp$ [NC]
 RewriteRule ^(.*)$ https://fuchiwaki.jp/$1 [R=301,L]
 
@@ -37,8 +30,3 @@ Redirect 301 /company.html /company/
 # ブログ記事のリダイレクト
 Redirect 301 /blog-post-20260101.html /blog/2026-01-01/
 Redirect 301 /blog-post-template.html /blog/_template/
-
-# クリーンURLの設定（index.htmlを非表示）
-# /about/index.html へのアクセスを /about/ にリダイレクト
-RewriteCond %{THE_REQUEST} ^GET\ /[^/]+/index\.html
-RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
