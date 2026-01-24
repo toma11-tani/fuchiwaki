@@ -4,6 +4,10 @@
 # RewriteEngineを有効化
 RewriteEngine On
 
+# 不要なクエリパラメータを削除してリダイレクト（srsltid, fbclid, gclid等）
+RewriteCond %{QUERY_STRING} ^(.*)(?:^|&)(?:srsltid|fbclid|gclid|utm_source|utm_medium|utm_campaign)=[^&]*(?:&(.*))?$ [NC]
+RewriteRule ^(.*)$ /$1?%1%2 [R=301,L]
+
 # /pages/ 配下のすべてのURLを /company/ にリダイレクト
 RewriteCond %{REQUEST_URI} ^/pages/
 RewriteRule ^pages/.* /company/? [R=301,L]
@@ -19,13 +23,6 @@ RewriteRule ^collections/.+ /products/? [R=301,L]
 # /blogs/ 配下を shop.fuchiwaki.jp/blogs/ にリダイレクト（パスを保持）
 RewriteRule ^blogs/?(.*)$ https://shop.fuchiwaki.jp/blogs/$1 [R=301,L]
 
-# 旧HTMLファイルから新しいディレクトリURLへのリダイレクト
-Redirect 301 /about.html /about/
-Redirect 301 /blog.html /blog/
-Redirect 301 /products.html /products/
-Redirect 301 /recipes.html /recipes/
-Redirect 301 /forest.html /forest/
-Redirect 301 /company.html /company/
 
 # ブログ記事のリダイレクト
 Redirect 301 /blog-post-20260101.html /blog/2026-01-01/
