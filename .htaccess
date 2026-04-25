@@ -24,6 +24,14 @@ RewriteRule ^collections/.+ /products/? [R=301,L]
 RewriteRule ^blogs/?(.*)$ https://shop.fuchiwaki.jp/blogs/$1 [R=301,L]
 
 
+# 旧URL（ルート直下の.html）→ クリーンURLへリダイレクト
+Redirect 301 /about.html    /about/
+Redirect 301 /products.html /products/
+Redirect 301 /recipes.html  /recipes/
+Redirect 301 /blog.html     /blog/
+Redirect 301 /company.html  /company/
+Redirect 301 /forest.html   /forest/
+
 # ブログ記事のリダイレクト
 Redirect 301 /blog-post-20260101.html /blog/2026-01-01/
 Redirect 301 /blog-post-template.html /blog/_template/
